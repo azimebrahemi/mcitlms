@@ -40,6 +40,18 @@ By defualt super_admin user have all permissions
 Permission are checking in every API request, if user has not permisison then the called api shows that you don't have sufficient permission
 there are some public route that user can access them without any permission
 Permissions are managent based on JWT
+### Main Poinsts considered in this project
+User ACL
+Permisson managent for each request using middlewares
+Workflow automation
+Process the Request using the queuable interface to avoid missing the request
+Load balancing
+Using the process queue to manage the urgentnesss of request
+Considering the security risk and attacks by resolving the vulnebrities
+Manager Request troputs
+Implementing JWT for Permissions
+Wrote the migration scripts to easy managing the databse tables
+Implement The Rest API architecture
 
 ## API Documents and formats 
 https://documenter.getpostman.com/view/20496683/2s9YJdWhVJ
