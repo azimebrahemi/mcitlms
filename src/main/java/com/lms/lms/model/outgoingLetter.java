@@ -1,25 +1,17 @@
 package com.lms.lms.model;
 
-import java.sql.Date;
-
-import jakarta.persistence.Basic;
-import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 
-public class OutgointLetter {
+@Entity
+public class outgoingLetter {
     @Id
     @GeneratedValue
     private long id;
-    private String file_name;
+    private String filename;
     private String file_path;
     private String source;
-    @Basic(optional = false)
-    @Column(name = "LastTouched", insertable = false, updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date creationDateTime;
     private String content;
     private String status;
     private boolean is_approved;
@@ -33,12 +25,12 @@ public class OutgointLetter {
         this.id = id;
     }
 
-    public String getFile_name() {
-        return file_name;
+    public String getFilename() {
+        return filename;
     }
 
-    public void setFile_name(String file_name) {
-        this.file_name = file_name;
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 
     public String getFile_path() {
@@ -55,14 +47,6 @@ public class OutgointLetter {
 
     public void setSource(String source) {
         this.source = source;
-    }
-
-    public Date getCreationDateTime() {
-        return creationDateTime;
-    }
-
-    public void setCreationDateTime(Date creationDateTime) {
-        this.creationDateTime = creationDateTime;
     }
 
     public String getContent() {
@@ -96,4 +80,5 @@ public class OutgointLetter {
     public void setUploadedby(String uploadedby) {
         this.uploadedby = uploadedby;
     }
+
 }
