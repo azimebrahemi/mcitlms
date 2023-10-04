@@ -40,3 +40,6 @@ By defualt super_admin user have all permissions
 Permission are checking in every API request, if user has not permisison then the called api shows that you don't have sufficient permission
 there are some public route that user can access them without any permission
 Permissions are managent based on JWT
+
+## API Documents and formats 
+https://documenter.getpostman.com/view/20496683/2s9YJdWhVJ
